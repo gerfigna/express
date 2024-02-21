@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/file.html', (req, res) => {
+  res.sendFile('./file.html', { root: __dirname })
+})
+
 app.post('/', (req, res) => {
   res.json(req.body);
   console.log('Hello World!')
